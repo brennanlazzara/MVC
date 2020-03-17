@@ -1,0 +1,30 @@
+{
+  "name": "MVC",
+  "version": "1.0.0",
+  "description": "This is composed of multiple folders (config, controllers, db, models, public views) This is compose of mulitple files (connections.js, orm.js, catsController.js, schema.sql, seeds.sql, cats.js, style.css, cats.js, ect...) This is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrennanPredmore/MVC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrennanPredmore/MVC/issues"
+  },
+  "homepage": "https://github.com/BrennanPredmore/MVC#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
