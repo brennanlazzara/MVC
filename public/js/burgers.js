@@ -1,20 +1,20 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+    $(".change-tastes_Good").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
+      var new_tastes_Good = $(this).data("new_tastes_Good");
   
-      var newSleepState = {
-        sleepy: newSleep
+      var new_tastes_Good_State = {
+        tastes_Good: new_tastes_Good
       };
   
       // Send the PUT request.
       $.ajax("/api/cats/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: new_tastes_Good_State
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          console.log("changed tastes good to", new_tastes_Good);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -25,33 +25,33 @@ $(function() {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var newCat = {
+      var newBurger = {
         name: $("#ca").val().trim(),
-        sleepy: $("[name=sleepy]:checked").val().trim()
+        tastes_Good: $("[name=tastes_Good]:checked").val().trim()
       };
   
       // Send the POST request.
-      $.ajax("/api/cats", {
+      $.ajax("/api/burgers", {
         type: "POST",
-        data: newCat
+        data: newBurger
       }).then(
         function() {
-          console.log("created new cat");
+          console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    $(".delete-burgers").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted burger", id);
           // Reload the page to get the updated list
           location.reload();
         }
