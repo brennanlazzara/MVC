@@ -1,3 +1,10 @@
+
+body {
+  background-image: url('/images/burgerBackground.jpg');
+  background-size: cover;
+  color: #f2f2f2;
+}
+
 h1 {
   text-align: center;
   margin: auto;
@@ -9,13 +16,25 @@ h2 {
 }
 
 #burgerName {
+  float: left;
+}
+
+#tasteGood {
   float: right;
+  display: inline;
+}
+
+ul {
+  list-style-type: none;
 }
 
 li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
   }
   
   .label {
