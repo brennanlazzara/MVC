@@ -3,6 +3,14 @@ h1 {
   margin: auto;
 }
 
+h2 {
+  text-align: center;
+  margin: auto;
+}
+
+#burgerName {
+  float: right;
+}
 
 li {
     padding: 5px;
