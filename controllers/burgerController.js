@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
+
     res.render("index", hbsObject);
   });
 });
@@ -31,7 +31,7 @@ router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
-  console.log(req.body)
+ 
   burgers.update({
     taste_Good: req.body.taste_Good
   }, condition, function(result) {
@@ -47,7 +47,7 @@ router.put("/api/burgers/:id", function(req, res) {
 router.delete("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  console.log(req.params);
+  
   burgers.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
