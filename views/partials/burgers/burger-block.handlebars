@@ -1,8 +1,8 @@
 <li>
 	{{name}}
 
-	<button class="change-taste_Good" data-id="{{id}}" data-new_tastes_Good="{{new_tastes_Good}}">
-		{{#if tastes_Good}}BURGER TIME!{{else}}LETS GET IT!{{/if}}
+	<button class="change-taste_Good" data-name="{{name}}" data-id="{{id}}" data-taste={{taste_Good}}>
+		{{#if taste_Good}}TURN IT DOWN!{{else}}LETS GET IT!{{/if}}
 	</button>
 
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>

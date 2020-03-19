@@ -4,8 +4,8 @@
 
 <ul>
   {{#each burgers}}
-    {{#unless tastes_Good}}
-      {{> burgers/burger-block tastes_Good=true}}
+    {{#unless taste_Good}}
+      {{> burgers/burger-block new_taste_Good=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,8 +14,8 @@
 
 <ul>
   {{#each burgers}}
-    {{#if tastes_Good}}
-      {{> burgers/burger-block new_tastes_Good=false}}
+    {{#if taste_Good}}
+      {{> burgers/burger-block new_taste_Good=false}}
     {{/if}}
   {{/each}}
 </ul>
@@ -29,9 +29,9 @@
   </div>
 
   <div class="form-group">
-    <label for="tastes_Good">Tastes Good?</label><br>
-    <input type="radio" name="tastes_Good" value="1" checked> Tastes Good!<br>
-    <input type="radio" name="tastes_Good" value="0"> Not Delicious
+    <label for="taste_Good">Tastes Good?</label><br>
+    <input type="radio" name="taste_Good" value="1" checked> Tastes Good!<br>
+    <input type="radio" name="taste_Good" value="0"> Not Delicious
   </div>
 
   <button type="submit">Add Burger</button>

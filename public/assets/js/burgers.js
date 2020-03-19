@@ -1,20 +1,25 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-tastes_Good").on("click", function(event) {
+    $(".change-taste_Good").on("click", function(event) {
       var id = $(this).data("id");
-      var new_tastes_Good = $(this).data("new_tastes_Good");
-  
-      var new_tastes_Good_State = {
-        tastes_Good: new_tastes_Good
+      var name = $(this).data("name");
+      var new_taste_Good = $(this).data("taste");
+
+      
+      var new_taste_Good_State = {
+        id,
+        name,
+        taste_Good: !Boolean(new_taste_Good)
       };
   
+      console.log(new_taste_Good_State)
       // Send the PUT request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: new_tastes_Good_State
+        data: new_taste_Good_State
       }).then(
         function() {
-          console.log("changed tastes good to", new_tastes_Good);
+          console.log("changed tastes good to", new_taste_Good);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -27,7 +32,7 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        tastes_Good: $("[name=tastes_Good]:checked").val().trim()
+        taste_Good: $("[name=taste_Good]:checked").val().trim()
       };
   
       // Send the POST request.
