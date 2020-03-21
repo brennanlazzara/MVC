@@ -8,21 +8,36 @@ body {
 h1 {
   text-align: center;
   margin: auto;
+  font-weight: bolder;
+  color: red;
 }
 
 h2 {
   text-align: center;
   margin: auto;
+  color: yellow;
 }
 
-/* #burgerName {
+#addABurger {
+  color: red;
+}
+
+#burgerName {
   float: left;
 }
 
 #tasteGood {
   float: right;
-  display: inline;
-} */
+}
+
+#ca {
+  text-align: center;
+  border-radius: 25px;
+}
+
+label {
+  font-weight: bold;
+}
 
 ul {
   list-style-type: none;
@@ -31,7 +46,7 @@ ul {
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #f2f2f2;
     text-align: center;
     color: black;
     font-weight: bolder;
