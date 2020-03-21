@@ -1,10 +1,10 @@
 # MVC
-This is composed of multiple folders (config, controllers, db, models, public views)
-This is compose of mulitple files (connections.js, orm.js, catsController.js, schema.sql, seeds.sql, cats.js, style.css, cats.js, ect...)
+This is composed of multiple folders (config, controllers, db, models, public views). This is compose of mulitple files (connections.js, orm.js, catsController.js, schema.sql, seeds.sql, cats.js, style.css, cats.js, ect...)
 This is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.
+The user can add, delete, update and view all types of burgers in two different collumns (tastes good, doesnt tastes good)
 
-## VIDEO OF THE APPLICATION!
-
+## SCREENSHOT OF THE APPLICATION!
+![Screenshot](public/images/mvcScreenshot.png)
 
 ## Heroku
 
